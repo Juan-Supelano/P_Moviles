@@ -7,6 +7,7 @@
 
 import React from 'react';
 import type {PropsWithChildren} from 'react';
+import MiComponente from './src/components/Micomponente';
 import {
   ScrollView,
   StatusBar,
@@ -27,6 +28,7 @@ import {
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
+
 
 function Section({children, title}: SectionProps): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -50,6 +52,8 @@ function Section({children, title}: SectionProps): React.JSX.Element {
         ]}>
         {children}
       </Text>
+      <Text>Bienvenido a Mi Aplicación</Text>
+      <MiComponente />
     </View>
   );
 }
